@@ -1,0 +1,91 @@
+from __future__ import annotations
+
+import httpx
+import pytest
+
+from chillet import PalworldClient
+from chillet.models import InfoResponse, MetricsResponse, PlayersResponse, SettingsResponse
+
+# GET
+
+
+def test_get_info(sync_client, api_payloads):
+    response = sync_client.get_info()
+    assert isinstance(response, InfoResponse)
+    assert response.version == api_payloads["info"]["version"]
+
+
+def test_get_players(sync_client, api_payloads):
+    response = sync_client.get_players()
+    assert isinstance(response, PlayersResponse)
+    assert len(response.players) == len(api_payloads["players"])
+    assert response.players[0].name == api_payloads["players"][0]["name"]
+
+
+def test_get_settings(sync_client, api_payloads):
+    response = sync_client.get_settings()
+    assert isinstance(response, SettingsResponse)
+    assert response.ServerPlayerMaxNum == api_payloads["settings"]["ServerPlayerMaxNum"]
+
+
+def test_get_metrics(sync_client, api_payloads):
+    response = sync_client.get_metrics()
+    assert isinstance(response, MetricsResponse)
+    assert response.serverfps == api_payloads["metrics"]["serverfps"]
+
+
+def test_get_info_http_error(sync_client, palworld_api_autouse):
+    palworld_api_autouse["get_info"].mock(return_value=httpx.Response(401, text="unauthorized"))
+    with pytest.raises(httpx.HTTPStatusError):
+        sync_client.get_info()
+
+
+# POST
+
+
+def test_post_announce(sync_client, palworld_api_autouse):
+    response = sync_client.post_announce("Hello!")
+    assert response is None
+    assert palworld_api_autouse["post_announce"].called
+
+
+def test_post_kick_with_message(sync_client, palworld_api_autouse):
+    response = sync_client.post_kick(userid="u1", message="bye")
+    assert response is None
+    assert palworld_api_autouse["post_kick"].called
+
+
+def test_post_ban_without_message(sync_client, palworld_api_autouse):
+    response = sync_client.post_ban(userid="u2", message=None)
+    assert response is None
+    assert palworld_api_autouse["post_ban"].called
+
+
+def test_post_unban(sync_client, palworld_api_autouse):
+    response = sync_client.post_unban("u3")
+    assert response is None
+    assert palworld_api_autouse["post_unban"].called
+
+
+def test_post_save(sync_client, palworld_api_autouse):
+    response = sync_client.post_save()
+    assert response is None
+    assert palworld_api_autouse["post_save"].called
+
+
+def test_post_shutdown(sync_client, palworld_api_autouse):
+    response = sync_client.post_shutdown(waittime=10, message="shutdown soon")
+    assert response is None
+    assert palworld_api_autouse["post_shutdown"].called
+
+
+def test_post_stop(sync_client, palworld_api_autouse):
+    response = sync_client.post_stop()
+    assert response is None
+    assert palworld_api_autouse["post_stop"].called
+
+
+def test_sync_close_closes():
+    client = PalworldClient(password="password")
+    client.close()
+    assert client.client.is_closed

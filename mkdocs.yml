@@ -1,0 +1,42 @@
+site_name: "Chillet"
+site_url: https://chillet.domi2k.space/
+site_description: "Chillet is a typed Python SDK for the Palworld REST API."
+site_author: "domi2k"
+
+repo_name: "domi2k/chillet"
+repo_url: "https://github.com/domi2k/Chillet"
+
+theme:
+  name: shadcn
+  icon: assets/c_logo.png
+  language: en
+  pygments_style:
+    light: shadcn-light
+    dark: github-dark
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - content.action.edit
+    - content.code.copy
+    - search
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Usage:
+      - Using Clients: usage/using-clients.md
+  - API Reference:
+      - Clients: reference/clients.md
+      - Models: reference/models.md
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - codehilite
+  - shadcn.extensions.codexec
+  - pymdownx.tabbed

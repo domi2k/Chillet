@@ -1,0 +1,62 @@
+name: Publish Python package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: pyproject.toml
+
+      - name: Install uv (with cache)
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Build (uv build)
+        run: |
+          uv build
+          ls -lh dist/
+
+      - name: Twine metadata check
+        run: uv run twine check dist/*
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: chillet-dist
+          path: dist/
+
+
+  publish:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/Chillet
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: chillet-dist
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          print-hash: true

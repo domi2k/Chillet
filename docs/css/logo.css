@@ -1,0 +1,20 @@
+.only-dark {
+  display: none !important;
+}
+.only-light {
+  display: block !important;
+}
+
+html.dark .only-light {
+  display: none !important;
+}
+html.dark .only-dark {
+  display: block !important;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  max-width: 80vw;
+}

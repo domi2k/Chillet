@@ -1,0 +1,73 @@
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "Chillet"
+version = "1.0.0"
+description = "Chillet is a typed Python SDK for the Palworld REST API."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    { name = "domi2k", email = "dp2craft@gmail.com" }
+]
+requires-python = ">=3.12"
+keywords = ["Palworld", "REST", "API", "SDK", "asyncio"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "anyio>=4.11.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.12.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/domi2k/Chillet"
+Issues = "https://github.com/domi2k/Chillet/issues"
+
+[dependency-groups]
+dev = [
+    "mkdocs-shadcn>=0.9.6",
+    "mkdocstrings[python]>=0.30.1",
+    "mypy>=1.18.2",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "pytest-cov>=7.0.0",
+    "respx>=0.22.0",
+    "ruff>=0.14.0",
+    "twine>=6.2.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=chillet --cov-report=term-missing"
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "PL", "RUF"]
+ignore = []
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+warn_return_any = true
+disallow_untyped_defs = true
+packages = ["chillet"]
+mypy_path = "src"
+
