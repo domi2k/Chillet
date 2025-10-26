@@ -4,7 +4,7 @@ site_description: "Chillet is a typed Python SDK for the Palworld REST API."
 site_author: "domi2k"
 
 repo_name: "domi2k/chillet"
-repo_url: "https://github.com/domi2k/Chillet"
+repo_url: "https://github.com/domi2k/chillet"
 
 theme:
   name: shadcn

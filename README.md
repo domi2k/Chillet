@@ -2,9 +2,9 @@
 
 <h3 align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/chillet_logo_light.png" height="170">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/chillet_logo_dark.png" height="170">
-    <img alt="Chillet" src="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/chillet_logo_light.png" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/chillet/main/.github/assets/chillet_logo_light.png" height="170">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/chillet/main/.github/assets/chillet_logo_dark.png" height="170">
+    <img alt="Chillet" src="https://raw.githubusercontent.com/domi2k/chillet/main/.github/assets/chillet_logo_light.png" height="170">
   </picture>
 </h3>
 
@@ -15,8 +15,8 @@ Chillet is a modern, fully typed Python SDK designed for Palworld REST API.
 </p>
 
 <p align="center">
-  <a href="https://github.com/domi2k/Chillet/stargazers"><img src="https://img.shields.io/github/stars/domi2k/Chillet?colorA=363a4f&colorB=ffffff&style=for-the-badge"></a>&nbsp;
-  <a href="https://github.com/domi2k/Chillet/issues"><img src="https://img.shields.io/github/issues/domi2k/Chillet?colorA=363a4f&colorB=ffffff&style=for-the-badge"></a>&nbsp;
+  <a href="https://github.com/domi2k/chillet/stargazers"><img src="https://img.shields.io/github/stars/domi2k/chillet?colorA=363a4f&colorB=ffffff&style=for-the-badge"></a>&nbsp;
+  <a href="https://github.com/domi2k/chillet/issues"><img src="https://img.shields.io/github/issues/domi2k/chillet?colorA=363a4f&colorB=ffffff&style=for-the-badge"></a>&nbsp;
 
   <!-- Docs -->
   <a href="https://chillet.domi2k.space/">
@@ -28,11 +28,11 @@ Chillet is a modern, fully typed Python SDK designed for Palworld REST API.
   </a>&nbsp;
 
   <!-- PyPI -->
-  <a href="https://pypi.org/project/Chillet/">
+  <a href="https://pypi.org/project/chillet/">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/pypi/v/Chillet?style=for-the-badge&colorA=363a4f&colorB=ffffff&logo=pypi&logoColor=black">
-      <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/pypi/v/Chillet?style=for-the-badge&colorA=363a4f&colorB=ffffff&logo=pypi&logoColor=white">
-      <img alt="PyPI" src="https://img.shields.io/pypi/v/Chillet?style=for-the-badge&colorA=363a4f&colorB=ffffff&logo=pypi&logoColor=black"/>
+      <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/pypi/v/chillet?style=for-the-badge&colorA=363a4f&colorB=ffffff&logo=pypi&logoColor=black">
+      <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/pypi/v/chillet?style=for-the-badge&colorA=363a4f&colorB=ffffff&logo=pypi&logoColor=white">
+      <img alt="PyPI" src="https://img.shields.io/pypi/v/chillet?style=for-the-badge&colorA=363a4f&colorB=ffffff&logo=pypi&logoColor=black"/>
     </picture>
   </a>
 </p>
@@ -55,8 +55,8 @@ pip install chillet
 
 ```bash
 # clone
-git clone https://github.com/domi2k/Chillet.git
-cd Chillet
+git clone https://github.com/domi2k/chillet.git
+cd chillet
 
 # create env + install (uv)
 uv sync --all-extras
@@ -127,8 +127,8 @@ This project isn’t endorsed by Pocket Pair, Inc., and doesn’t reflect the vi
 </p>
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/footer_light.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/footer_dark.png">
-    <img alt="Footer" src="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/footer_light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/chillet/main/.github/assets/footer_light.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/chillet/main/.github/assets/footer_dark.png">
+    <img alt="Footer" src="https://raw.githubusercontent.com/domi2k/chillet/main/.github/assets/footer_light.png">
   </picture>
 </p>
