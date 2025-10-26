@@ -2,9 +2,9 @@
 
 <h3 align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/.github/assets/chillet_logo_light.png" height="170">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/.github/assets/chillet_logo_dark.png" height="170">
-    <img alt="Chillet" src="https://raw.githubusercontent.com/domi2k/Chillet/.github/assets/chillet_logo_light.png" height="170">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/chillet_logo_light.png" height="170">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/chillet_logo_dark.png" height="170">
+    <img alt="Chillet" src="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/chillet_logo_light.png" height="170">
   </picture>
 </h3>
 
@@ -127,8 +127,8 @@ This project isn’t endorsed by Pocket Pair, Inc., and doesn’t reflect the vi
 </p>
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/.github/assets/footer_light.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/.github/assets/footer_dark.png">
-    <img alt="Footer" src="https://raw.githubusercontent.com/domi2k/Chillet/.github/assets/footer_light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/footer_light.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/footer_dark.png">
+    <img alt="Footer" src="https://raw.githubusercontent.com/domi2k/Chillet/main/.github/assets/footer_light.png">
   </picture>
 </p>
